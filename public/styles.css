@@ -1,16 +1,55 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Muli', 'Roboto', 'Oxygen', 'Droid Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #222;
+  color: #3D6053;
+  font-size: 20px;
+}
+html, body, #root {
+  height: 100%;
+}
+
+p {
+  color: #A8C7BB;
+}
+
+input {
+  border: 1px solid #A8C7BB;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 3px 7px;
+  color: #3D6053;
+  outline: none;
 }
 
 #header {
   width: 100%;
-  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  background-color: #A8C7BB;
+  border-radius: 0px 0px 0px 200px;
+  font-weight: bold;
+}
+
+#app-header {
+  width: 20%;
+  display: inline-block;
+  height: 100%;
+  font-weight: bold;
+}
+
+#app-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 85%;
+  width: 80%;
+  background-color: #A8C7BB;
+  border-radius: 0px 0px 0px 200px;
+  color: #FFF;
+}
+#app-container p {
+  color: #FFF;
 }
 
 a {
@@ -27,11 +66,44 @@ a:hover {
   height: 100%;
 }
 .nav a {
-  font-size: 32px;
+  font-size: 20px;
+  margin: 10px;
+  color: #3D6053;
+}
+.nav a:hover {
+  color: #FFF;
 }
 
-.button {
-  padding: 5px;
-  color: #22CC99;
-  border: 1px #22CC99 solid;
+.app-nav {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+.app-nav a {
+  display: block;
+  margin: 20px 0;
+  font-size: 22px;
+}
+
+button {
+  background: #D2A297;
+  border-radius: 10px;
+  color: #FFF;
+  padding: 12px 15px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button.inverted {
+  background: #FFF;
+  border: 1px solid #D2A297;
+  color: #D2A297;
+}
+
+.notification {
+  background: rgba(210, 162, 151, 0.7);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 18px;
 }

@@ -6,9 +6,10 @@ function Header() {
 		<div id="header">
 			<div style={{width:"95vw", margin:"0 auto", height:"45px"}}>
 				<div className="nav">
-					<Link to="/login">Login</Link>
-					<Link to="/" style={{fontSize:"32px"}}>Baby Bump</Link>
-					<span style={{width:"97px"}}></span>
+					<Link to="/" style={{marginLeft: 'auto'}}>Home</Link>
+					<Link to="/learnmore">Learn More</Link>
+					<Link to="/invite">Send an Invite</Link>
+					<Link to="/login" style={{marginLeft: '25px'}}>Log In</Link>
 				</div>
 			</div>
 		</div>
