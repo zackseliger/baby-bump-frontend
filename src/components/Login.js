@@ -6,7 +6,7 @@ function Login() {
 
 	function submit(e) {
 		e.preventDefault();
-		history.push('/app/home');
+		history.push('/app/dashboard');
 	}
 
 	return (

@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function AppHeader() {
+	let location = window.location.pathname.slice(window.location.pathname.lastIndexOf("/")+1);
+	let lightColorStyle = {color: '#A8C7BB'}
+	
+
 	return (
 		<div id="app-header">
 			<Link style={{color:'#D2A297', fontSize:'48px'}} to="/">
@@ -11,10 +15,10 @@ function AppHeader() {
 
 			<div>
 				<div className="app-nav">
-					<Link to="/app/dashboard">Dashboard</Link>
-					<Link to="/app/journal">Journal</Link>
-					<Link to="/app/share">Share</Link>
-					<Link to="/app/profile">Profile</Link>
+					<Link style={location==="dashboard"?lightColorStyle:{}} to="/app/dashboard">Dashboard</Link>
+					<Link style={location==="journal"?lightColorStyle:{}} to="/app/journal">Journal</Link>
+					<Link style={location==="share"?lightColorStyle:{}} to="/app/share">Share</Link>
+					<Link style={location==="profile"?lightColorStyle:{}} to="/app/profile">Profile</Link>
 					<Link to="/">Log Out</Link>
 				</div>
 			</div>

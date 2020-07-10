@@ -18,8 +18,7 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        {/* <Header/> */}
-        <Route path="/app"><AppHeader/></Route>
+        <Route path="/app" component={() => <AppHeader/>}/>
         <Route path="/"><Header/></Route>
       </Switch>
 
