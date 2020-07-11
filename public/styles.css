@@ -198,7 +198,9 @@ p.row span {
   border-radius: 10px;
   margin: 10px;
   padding: 20px;
+  transition: background-color 0.1s ease-out;
+  cursor: pointer;
 }
-.chart-card .chart-container {
-  height: 100%;
+.chart-card:hover {
+  background-color: #F4F4F4;
 }

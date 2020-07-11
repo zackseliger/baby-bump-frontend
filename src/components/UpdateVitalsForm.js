@@ -5,20 +5,19 @@ function UpdateVitalsForm(props) {
 		let inputs = document.getElementById('vitals-popup').getElementsByTagName('input');
 		let anxietySelect = document.getElementById('vitals-popup').getElementsByTagName('select')[0];
 
-		let bloodPressure = inputs[0].value + "/" + inputs[1].value;
-		let weight = inputs[2].value;
-		let anxiety = anxietySelect.options[anxietySelect.selectedIndex].text;
-		let something1 = inputs[3].value;
-		let something2 = inputs[4].value;
-
-		console.log(bloodPressure);
-		console.log(weight);
-		console.log(anxiety);
-		console.log(something1);
-		console.log(something2);
+		let data = {
+			'systolic blood pressure': parseInt(inputs[0].value),
+			'diastolic blood pressure': parseInt(inputs[1].value),
+			weight: parseInt(inputs[2].value),
+			anxiety: anxietySelect.options[anxietySelect.selectedIndex].text,
+			something1: inputs[3].value,
+			something2: inputs[4].value
+		}
 
 		props.setVisible(false);
+		props.addData(data);
 	}
+
 	function cancel() {
 		props.setVisible(false);
 	}
