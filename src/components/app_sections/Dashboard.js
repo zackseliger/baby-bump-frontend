@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import UpdateVitals from './UpdateVitals';
-import ChartCard from './ChartCard';
+import UpdateVitalsForm from '../UpdateVitalsForm';
+import ChartCard from '../ChartCard';
 
 function Dashboard() {
 	let [showPopup, setShowPopup] = useState(false);
@@ -31,7 +31,7 @@ function Dashboard() {
 				<ChartCard/>
 			</div>
 
-			{(showPopup)?<UpdateVitals setVisible={setShowPopup}/>:[]}
+			{(showPopup)?<UpdateVitalsForm setVisible={setShowPopup}/>:[]}
 		</div>
 	);
 }

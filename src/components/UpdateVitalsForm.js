@@ -1,6 +1,6 @@
 import React from 'react';
 
-function UpdateVitals(props) {
+function UpdateVitalsForm(props) {
 	function submit() {
 		let inputs = document.getElementById('vitals-popup').getElementsByTagName('input');
 		let anxietySelect = document.getElementById('vitals-popup').getElementsByTagName('select')[0];
@@ -25,7 +25,7 @@ function UpdateVitals(props) {
 
 	return (
 		<div className="popup-background">
-			<div className="popup" id="vitals-popup">
+			<div className="popup same-rows" id="vitals-popup">
 				<span style={{fontWeight:'bold', color:'#3D6053'}}>Update your vitals here:</span>
 				<p>
 					blood pressure:
@@ -52,4 +52,4 @@ function UpdateVitals(props) {
 	);
 }
 
-export default UpdateVitals
+export default UpdateVitalsForm

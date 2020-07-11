@@ -23,6 +23,40 @@ input, select {
   color: #3D6053;
   outline: none;
 }
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+
+/* OVAL CHECKBOX */
+input[type=checkbox].oval {
+  visibility: hidden;
+}
+label.oval-toggler {
+  width: 70px;
+  height: 40px;
+  position: relative;
+  display: block;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 35px;
+  background: #FFF;
+}
+label.oval-toggler::after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  background: #AAA;
+  position: absolute;
+  top: 2.5px;
+  left: 2px;
+  transition: all 0.1s ease-out;
+}
+input[type=checkbox]:checked + label.oval-toggler::after {
+  left: 33px;
+  background: #D2A297;
+}
 
 #header {
   width: 100%;
@@ -137,14 +171,22 @@ button.inverted {
 }
 .popup p {
   color: #A8C7BB !important;
+}
+
+.same-rows p {
   display: flex;
   justify-content: space-between;
 }
-.popup input, .popup select {
+.same-rows input, .same-rows select {
   box-sizing: content-box;
   margin-left: 10px;
   width: 75px;
   text-align: center;
+}
+
+p.row span {
+  display: inline-block;
+  margin: 10px;
 }
 
 .chart-card {

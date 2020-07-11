@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
+import AppHeader from './components/AppHeader';
 import Footer from './components/Footer';
 import {
   BrowserRouter,
@@ -7,12 +8,11 @@ import {
   Switch
 } from "react-router-dom";
 //pages
-import Homepage from './components/Homepage';
-import Login from './components/Login';
-import Signup from './components/Signup';
-import AppContainer from './components/AppContainer';
-import NotFound from './components/NotFound';
-import AppHeader from './components/AppHeader';
+import Homepage from './components/pages/Homepage';
+import Login from './components/pages/Login';
+import Signup from './components/pages/Signup';
+import AppContainer from './components/pages/AppContainer';
+import NotFound from './components/pages/NotFound';
 
 function App() {
   return (
