@@ -9,9 +9,7 @@ function UpdateVitalsForm(props) {
 			'systolic blood pressure': parseInt(inputs[0].value),
 			'diastolic blood pressure': parseInt(inputs[1].value),
 			weight: parseInt(inputs[2].value),
-			anxiety: anxietySelect.options[anxietySelect.selectedIndex].text,
-			something1: inputs[3].value,
-			something2: inputs[4].value
+			anxiety: parseInt(anxietySelect.options[anxietySelect.selectedIndex].text[0])
 		}
 
 		props.setVisible(false);
@@ -35,13 +33,14 @@ function UpdateVitalsForm(props) {
 				<p>weight: <input type="text"/></p>
 				<p>
 					anxiety:
-					<select>
-						<option>good</option>
-						<option>bad</option>
+					<select style={{width:'auto'}}>
+						<option>1 - low</option>
+						<option>2 - mild</option>
+						<option>3 - moderate</option>
+						<option>4 - high</option>
+						<option>5 - extreme</option>
 					</select>
 				</p>
-				<p>something 1: <input type="text"/></p>
-				<p>something 2: <input type="text"/></p>
 				<div style={{display:'flex', justifyContent:'space-evenly'}}>
 					<button onClick={() => submit()}>submit</button>
 					<button onClick={() => cancel()} className="inverted">cancel</button>

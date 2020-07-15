@@ -163,6 +163,7 @@ button.inverted {
   left: 0;
   top: 0;
   text-align: center;
+  z-index: 1;
 }
 
 .popup {
@@ -172,7 +173,7 @@ button.inverted {
   border-radius: 10px;
   padding: 20px;
   top: 50%;
-  transform: translateY(-70%);
+  transform: translateY(-60%);
 }
 .popup p {
   color: #A8C7BB !important;
@@ -196,6 +197,7 @@ p.row span {
 
 .chart-card {
   display: inline-block;
+  position: relative;
   background-color: #FFF;
   width: 250px;
   height: 150px;
@@ -205,6 +207,11 @@ p.row span {
   padding: 20px;
   transition: background-color 0.1s ease-out;
   cursor: pointer;
+}
+.chart-card svg {
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }
 .chart-card:hover {
   background-color: #F4F4F4;

@@ -77,6 +77,15 @@ function AppContainer() {
 		setJournals(newJournals);
 	}
 
+	if (userData.length == 0) {
+		addUserData({
+			'systolic blood pressure': 120,
+			'diastolic blood pressure': 80,
+			weight: 200,
+			anxiety: 2
+		})
+	}
+
 	return(
 		<div id="app-container">
 			<Route path="/app/dashboard"><Dashboard userData={userData} addUserData={addUserData}/></Route>
