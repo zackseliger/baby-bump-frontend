@@ -3,9 +3,29 @@ import { Route } from 'react-router-dom';
 import Dashboard from '../app_sections/Dashboard';
 import Share from '../app_sections/Share';
 import Journal from '../app_sections/Journal';
+import Feedback from '../app_sections/Feedback';
 
 function AppContainer() {
-	let [userData, setUserData] = useState([]);
+	let startingUserData = [
+		{
+			name: 'systolic blood pressure',
+			data: [122, 125, 120]
+		},
+		{
+			name: 'diastolic blood pressure',
+			data: [80, 83, 81]
+		},
+		{
+			name: 'weight',
+			data: [120, 118, 115]
+		},
+		{
+			name: 'anxiety',
+			data: [2, 3, 2]
+		}
+	];
+
+	let [userData, setUserData] = useState(startingUserData);
 	let [contacts, setContacts] = useState([]);
 	let [journals, setJournals] = useState([]);
 
@@ -77,20 +97,12 @@ function AppContainer() {
 		setJournals(newJournals);
 	}
 
-	if (userData.length == 0) {
-		addUserData({
-			'systolic blood pressure': 120,
-			'diastolic blood pressure': 80,
-			weight: 200,
-			anxiety: 2
-		})
-	}
-
 	return(
 		<div id="app-container">
 			<Route path="/app/dashboard"><Dashboard userData={userData} addUserData={addUserData}/></Route>
 			<Route path="/app/share"><Share contacts={contacts} addContact={addContact} editContact={editContact} deleteContact={deleteContact} /></Route>
 			<Route path="/app/journal"><Journal journals={journals} addJournal={addJournal}/></Route>
+			<Route path="/app/feedback"><Feedback/></Route>
 		</div>
 	);
 }

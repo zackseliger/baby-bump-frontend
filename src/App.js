@@ -10,6 +10,7 @@ import {
 //pages
 import Homepage from './components/pages/Homepage';
 import Login from './components/pages/Login';
+import ProviderLogin from './components/pages/ProviderLogin';
 import Signup from './components/pages/Signup';
 import AppContainer from './components/pages/AppContainer';
 import NotFound from './components/pages/NotFound';
@@ -25,6 +26,7 @@ function App() {
       <Switch>
         <Route path="/" exact><Homepage/></Route>
         <Route path="/login"><Login/></Route>
+        <Route path="/login2"><ProviderLogin/></Route>
         <Route path="/signup"><Signup/></Route>
 
         <Route path="/app"><AppContainer/></Route>

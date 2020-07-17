@@ -19,6 +19,7 @@ function AppHeader() {
 					<Link style={location==="journal"?lightColorStyle:{}} to="/app/journal">Journal</Link>
 					<Link style={location==="share"?lightColorStyle:{}} to="/app/share">Share</Link>
 					<Link style={location==="profile"?lightColorStyle:{}} to="/app/profile">Profile</Link>
+					<Link style={location==="feedback"?lightColorStyle:{}} to="/app/feedback">Feedback</Link>
 					<Link to="/">Log Out</Link>
 				</div>
 			</div>
