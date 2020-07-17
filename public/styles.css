@@ -216,3 +216,21 @@ p.row span {
 .chart-card:hover {
   background-color: #F4F4F4;
 }
+
+.journal-card {
+  transition: background-color 0.1s ease-out;
+  background-color: #FFF;
+  width: 150px;
+  height: 75px;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  display: inline-block;
+  cursor: pointer;
+  color: #D2A297;
+  font-weight: bold;
+}
+.journal-card:hover {
+  background-color: #F4F4F4;
+}

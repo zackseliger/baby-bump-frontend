@@ -18,11 +18,13 @@ function Journal(props) {
 				<p>You don't have any journals yet. Click <a onClick={showAddForm} href="#">here</a> to add an entry.</p>
 			</div>
 
-			{props.journals.map((journal, index) => {
-				return (
-					<JournalCard key={index} journal={journal}/>
-				);
-			})}
+			<div style={{marginTop: '25px'}}>
+				{props.journals.map((journal, index) => {
+					return (
+						<JournalCard key={index} weekNum={index+1} journal={journal} editJournal={props.editJournal}/>
+					);
+				})}
+			</div>
 
 			{(showingAddForm)?<JournalForm addJournal={props.addJournal} setVisible={setShowingAddForm}/>:[]}
 		</div>

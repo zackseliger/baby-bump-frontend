@@ -5,29 +5,46 @@ import Share from '../app_sections/Share';
 import Journal from '../app_sections/Journal';
 import Feedback from '../app_sections/Feedback';
 
-function AppContainer() {
-	let startingUserData = [
-		{
-			name: 'systolic blood pressure',
-			data: [122, 125, 120]
-		},
-		{
-			name: 'diastolic blood pressure',
-			data: [80, 83, 81]
-		},
-		{
-			name: 'weight',
-			data: [120, 118, 115]
-		},
-		{
-			name: 'anxiety',
-			data: [2, 3, 2]
-		}
-	];
+const startingUserData = [
+	{
+		name: 'systolic blood pressure',
+		data: [122, 125, 120]
+	},
+	{
+		name: 'diastolic blood pressure',
+		data: [80, 83, 81]
+	},
+	{
+		name: 'weight',
+		data: [120, 118, 115]
+	},
+	{
+		name: 'anxiety',
+		data: [2, 3, 2]
+	}
+];
 
+const startingJournals = [
+	{
+		craving: 'salty',
+		symptoms: 'fatigue',
+		mood: 'sleepy',
+		highlights: 'put highlight here',
+		notes: 'N/A'
+	},
+	{
+		craving: 'spicy',
+		symptoms: 'none',
+		mood: 'calm',
+		highlights: 'put highlight here',
+		notes: 'N/A'
+	}
+]
+
+function AppContainer() {
 	let [userData, setUserData] = useState(startingUserData);
+	let [journals, setJournals] = useState(startingJournals);
 	let [contacts, setContacts] = useState([]);
-	let [journals, setJournals] = useState([]);
 
 	//adds user data from keys of the data object
 	function addUserData(data) {
@@ -87,9 +104,10 @@ function AppContainer() {
 		for (let i = 0; i < journals.length; i++) {
 			newJournals.push({
 				craving: journals[i].craving,
-				feeling: journals[i].feeling,
+				symptoms: journals[i].symptoms,
+				mood: journals[i].mood,
 				highlights: journals[i].highlights,
-				appointments: journals[i].appointments
+				notes: journals[i].notes
 			});
 		}
 
@@ -97,11 +115,31 @@ function AppContainer() {
 		setJournals(newJournals);
 	}
 
+	function editJournal(index, newJournal) {
+		let newJournals = [];
+		for (let i = 0; i < journals.length; i++) {
+			if (i === index) {
+				newJournals[i] = newJournal;
+				continue;
+			}
+
+			newJournals.push({
+				craving: journals[i].craving,
+				symptoms: journals[i].symptoms,
+				mood: journals[i].mood,
+				highlights: journals[i].highlights,
+				notes: journals[i].notes
+			});
+		}
+
+		setJournals(newJournals);
+	}
+
 	return(
 		<div id="app-container">
 			<Route path="/app/dashboard"><Dashboard userData={userData} addUserData={addUserData}/></Route>
 			<Route path="/app/share"><Share contacts={contacts} addContact={addContact} editContact={editContact} deleteContact={deleteContact} /></Route>
-			<Route path="/app/journal"><Journal journals={journals} addJournal={addJournal}/></Route>
+			<Route path="/app/journal"><Journal journals={journals} addJournal={addJournal} editJournal={editJournal}/></Route>
 			<Route path="/app/feedback"><Feedback/></Route>
 		</div>
 	);

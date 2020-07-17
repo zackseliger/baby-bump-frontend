@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import EditJournalForm from './EditJournalForm';
 
 function JournalCard(props) {
+	let [showingPopup, setShowingPopup] = useState(false);
+
+	function showPopup() {
+		setShowingPopup(true);
+	}
+
 	return (
-		<div className="chart-card" style={{color:'#3D6053'}}>
-			<p style={{textAlign:'center', fontWeight:'bold', color:'#3D6053'}}>A journal entry</p>
-			<span>{props.journal.craving}</span>
-		</div>
+		<React.Fragment>
+			<div className="journal-card" onClick={showPopup}>
+				<span>week {props.weekNum}</span>
+			</div>
+
+			{showingPopup?<EditJournalForm journal={props.journal} editJournal={props.editJournal} weekNum={props.weekNum} setVisibility={setShowingPopup}/>:[]}
+		</React.Fragment>
 	);
 }
 
