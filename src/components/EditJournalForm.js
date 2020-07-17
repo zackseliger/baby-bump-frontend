@@ -58,7 +58,7 @@ function EditJournalForm(props) {
 				<p>notes for physician</p>
 				<p><textarea>{props.journal.notes}</textarea></p>
 
-				<p>
+				<p style={{width:'75%', margin:'0 auto'}}>
 					<button onClick={save}>save</button>
 					<button className="inverted" onClick={() => props.setVisibility(false)}>cancel</button>
 				</p>

@@ -21,6 +21,14 @@ const startingUserData = [
 	{
 		name: 'anxiety',
 		data: [2, 3, 2]
+	},
+	{
+		name: 'kicks',
+		data: [12, 14, 5]
+	},
+	{
+		name: 'fetal heart tones',
+		data: [127, 144, 155]
 	}
 ];
 

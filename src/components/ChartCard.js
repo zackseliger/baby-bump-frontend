@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Line, Bar, defaults } from 'react-chartjs-2';
+import { Line, defaults } from 'react-chartjs-2';
 import BadIcon from './icons/BadIcon';
 import MediumIcon from './icons/MediumIcon';
 import GoodIcon from './icons/GoodIcon';
@@ -61,6 +61,28 @@ function ChartCard(props) {
 			updateStatus('bad');
 		}
 		else if (lastData >= 300) {
+			updateStatus('medium');
+		}
+		else {
+			updateStatus('good');
+		}
+	}
+	else if (props.name === 'kicks') {
+		if (lastData < 8) {
+			updateStatus('bad');
+		}
+		else if (lastData < 10) {
+			updateStatus('medium');
+		}
+		else {
+			updateStatus('good');
+		}
+	}
+	else if (props.name === 'fetal heart tones') {
+		if (lastData < 80) {
+			updateStatus('bad');
+		}
+		else if (lastData < 110) {
 			updateStatus('medium');
 		}
 		else {

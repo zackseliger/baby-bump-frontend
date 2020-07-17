@@ -12,7 +12,7 @@ function MetricPopup(props) {
 		'diastolic blood pressure': 'Diastolic blood pressure indicates how much pressure your blood is exerting against your artery walls while the heart is resting between beats.',
 		'weight': 'While each pregnancy is different, having a high BMI during pregnancy increases the risk of complications and various health issues for your baby.',
 		'anxiety': 'High anxiety can have negative effects on your pregnancy and baby but it is not uncommon. It is important that you address any anxiety that emerges during pregnancy.',
-		'kicks': 'A general rule of thumb is to document 10 kicks within a 2 hour period daily. If you do not achieve this, try again later in the day. Upon your second attempt, if 10 kicks are not noted, please connect with a healthcare professional.',
+		'kicks': 'A general rule of thumb is to document 10 baby kicks within a 2 hour period daily. If you do not achieve this, try again later in the day. Upon your second attempt, if 10 kicks are not noted, please connect with a healthcare professional.',
 		'fetal heart tones': 'Fetal heart rate monitoring measures the heart rate and rhythm of your baby. The average fetal heart rate is between 110 and 160 beats per minute. It can vary by 5 to 25 beats per minute.'
 	}
 
