@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import AppHeader from './components/AppHeader';
+import ProviderHeader from './components/ProviderHeader';
 import Footer from './components/Footer';
 import {
   BrowserRouter,
@@ -13,6 +14,7 @@ import Login from './components/pages/Login';
 import ProviderLogin from './components/pages/ProviderLogin';
 import Signup from './components/pages/Signup';
 import AppContainer from './components/pages/AppContainer';
+import ProviderContainer from './components/pages/ProviderContainer';
 import NotFound from './components/pages/NotFound';
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route path="/app" component={() => <AppHeader/>}/>
+        <Route path="/provider" component={() => <ProviderHeader/>}/>
         <Route path="/"><Header/></Route>
       </Switch>
 
@@ -30,6 +33,7 @@ function App() {
         <Route path="/signup"><Signup/></Route>
 
         <Route path="/app"><AppContainer/></Route>
+        <Route path="/provider"><ProviderContainer/></Route>
 
         <Route path="/"><NotFound/></Route>
       </Switch>

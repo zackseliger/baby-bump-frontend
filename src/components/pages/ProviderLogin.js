@@ -6,7 +6,7 @@ function ProviderLogin() {
 
 	function submit(e) {
 		e.preventDefault();
-		history.push('/provider/dashboard');
+		history.push('/provider/patients');
 	}
 
 	return (
