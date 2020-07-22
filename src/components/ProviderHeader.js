@@ -9,15 +9,14 @@ function AppHeader() {
 	return (
 		<div id="app-header">
 			<Link style={{color:'#D2A297', fontSize:'48px'}} to="/">
-				<img style={{width:'100px'}} src="/image/rainbow.png" alt="Nona logo"/>
-				<span style={{top:'-15px', position:'relative'}}>Nona</span>
+				<img style={{width:'100px'}} src="/image/logo.jpg" alt="Nona logo"/>
+				<span style={{top:'-55px', position:'relative'}}>Nona</span>
 			</Link>
 
 			<div>
 				<div className="app-nav">
 					<Link style={location==="patients"?lightColorStyle:{}} to="/provider/patients">Patients</Link>
-					<Link style={location==="profile"?lightColorStyle:{}} to="/provider/profile">Profile</Link>
-					{/* <Link style={location==="feedback"?lightColorStyle:{}} to="/provider/feedback">Feedback</Link> */}
+					<Link style={location==="feedback"?lightColorStyle:{}} to="/provider/feedback">Feedback</Link>
 					<Link to="/">Log Out</Link>
 				</div>
 			</div>

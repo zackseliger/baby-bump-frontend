@@ -9,7 +9,9 @@ function UpdateVitalsForm(props) {
 			'systolic blood pressure': parseInt(inputs[0].value),
 			'diastolic blood pressure': parseInt(inputs[1].value),
 			weight: parseInt(inputs[2].value),
-			anxiety: parseInt(anxietySelect.options[anxietySelect.selectedIndex].text[0])
+			anxiety: parseInt(anxietySelect.options[anxietySelect.selectedIndex].text[0]),
+			kicks: parseInt(inputs[3].value),
+			'fetal heart tones': parseInt(inputs[4].value)
 		}
 
 		props.setVisible(false);
@@ -40,6 +42,14 @@ function UpdateVitalsForm(props) {
 						<option>4 - high</option>
 						<option>5 - extreme</option>
 					</select>
+				</p>
+				<p>
+					kicks:
+					<input type="text"/>
+				</p>
+				<p>
+					fetal heart tones:
+					<input type="text"/>
 				</p>
 				<div style={{display:'flex', justifyContent:'space-evenly'}}>
 					<button onClick={() => submit()}>submit</button>

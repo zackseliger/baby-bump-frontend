@@ -30,10 +30,10 @@ function ViewJournalForm(props) {
 				</p>
 
 				<p>highlights</p>
-				<p><textarea disabled>{props.journal.highlights}</textarea></p>
+				<p><textarea disabled defaultValue={props.journal.notes}></textarea></p>
 
 				<p>notes for physician</p>
-				<p><textarea disabled>{props.journal.notes}</textarea></p>
+				<p><textarea disabled defaultValue={props.journal.notes}></textarea></p>
 
 				<p style={{display:'block', margin:'0 auto'}}>
 					<button onClick={() => props.setVisibility(false)}>back</button>

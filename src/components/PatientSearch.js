@@ -19,11 +19,11 @@ function PatientSearch(props) {
 
 	return (
 		<React.Fragment>
-			<h1 style={{fontWeight:'normal', marginBottom:'0'}}>Welcome Back, <strong>Virginia</strong></h1>
+			<h1 style={{fontWeight:'normal', marginBottom:'0'}}>Welcome back, <strong>Dr. LeBlanc</strong></h1>
 			<p style={{marginTop:'0', fontSize:'23px'}}>See how your patients are progressing.</p>
 
 			<p>
-				<input style={{marginTop:'50px'}} type="text" placeholder="search" onChange={handleChange}/>
+				<input style={{marginTop:'50px', marginLeft:'10px'}} type="text" placeholder="search" onChange={handleChange}/>
 			</p>
 
 			{

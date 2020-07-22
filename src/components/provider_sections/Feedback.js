@@ -6,7 +6,7 @@ function Feedback() {
 
 	function submit(e) {
 		e.preventDefault();
-		history.push("/app/dashboard");
+		history.push("/provider/patients");
 	}
 
 	return (

@@ -11,12 +11,20 @@ function Journal(props) {
 
 	return (
 		<div style={{padding:'50px 100px'}}>
-			<h1 style={{fontWeight:'normal', marginBottom:'0'}}>Note Your Progress</h1>
-			<p style={{marginTop:'0', fontSize:'23px'}}>Keep journals to track your progress as you remember it.</p>
+			<h1 style={{fontWeight:'normal', marginBottom:'0'}}>Note your progress</h1>
+			<p style={{marginTop:'0', fontSize:'23px'}}>Keep a journal to track your progress.</p>
 
-			<div className="notification">
-				<p>You don't have any journals yet. Click <a onClick={showAddForm} href="#">here</a> to add an entry.</p>
-			</div>
+			{
+				props.journals.length>0
+				?
+				<div className="notification">
+						<p>You started writing journal entries. Click <a onClick={showAddForm} href="#">here</a> to add another.</p>
+				</div>
+				:
+				<div className="notification">
+					<p>You don't have any journal entries yet. Click <a onClick={showAddForm} href="#">here</a> to add an entry.</p>
+				</div>
+			}
 
 			<div style={{marginTop: '25px'}}>
 				{props.journals.map((journal, index) => {
@@ -26,7 +34,7 @@ function Journal(props) {
 				})}
 			</div>
 
-			{(showingAddForm)?<JournalForm addJournal={props.addJournal} setVisible={setShowingAddForm}/>:[]}
+			{(showingAddForm)?<JournalForm addJournal={props.addJournal} weekNum={props.journals.length+1} setVisible={setShowingAddForm}/>:[]}
 		</div>
 	);
 }

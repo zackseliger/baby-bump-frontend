@@ -10,7 +10,7 @@ function Share(props) {
 
 	return (
 		<div style={{padding:'50px 100px'}}>
-			<h1 style={{fontWeight:'normal', marginBottom:'0'}}>Share Your Progress</h1>
+			<h1 style={{fontWeight:'normal', marginBottom:'0'}}>Share your progress</h1>
 			<p style={{marginTop:'0', fontSize:'23px'}}>You can invite a loved one or healthcare provider to securely view your progress.</p>
 
 			{props.contacts.length===0 ?
@@ -19,7 +19,7 @@ function Share(props) {
 			</div>
 			:
 			<div className="notification">
-				<p>You're sharing your progress with {props.contacts.length} people. Click <a href="#" onClick={showAddForm}>here</a> to add more.</p>
+				<p>You're sharing your progress. Click <a href="#" onClick={showAddForm}>here</a> to add more.</p>
 			</div>}
 
 			{props.contacts.map((contact, index) => {

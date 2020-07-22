@@ -33,20 +33,22 @@ const startingUserData = [
 ];
 
 const startingJournals = [
-	{
-		craving: 'salty',
-		symptoms: 'fatigue',
-		mood: 'sleepy',
-		highlights: 'put highlight here',
-		notes: 'N/A'
-	},
-	{
-		craving: 'spicy',
-		symptoms: 'none',
-		mood: 'calm',
-		highlights: 'put highlight here',
-		notes: 'N/A'
-	}
+	{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+	{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+	{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+	{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+	{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+	{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+	{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+	{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+	{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+	{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+	{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+	{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+	{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+	{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+	{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+	{craving:'spicy', symptoms:'none', mood:'calm', highlights:'put highlight here', notes:'N/A'}
 ]
 
 function AppContainer() {

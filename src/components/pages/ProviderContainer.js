@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
 import Patients from '../provider_sections/Patients';
+import Feedback from '../provider_sections/Feedback';
 
 const startingPatients = [
 	{
@@ -16,7 +17,21 @@ const startingPatients = [
 		],
 		journals: [
 			{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
-			{craving:'spicy', symptoms:'none', mood:'calm', highlights:'put highlight here', notes:'N/A'}
+			{craving:'spicy', symptoms:'none', mood:'calm', highlights:'put highlight here', notes:'N/A'},
+			{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+			{craving:'spicy', symptoms:'none', mood:'calm', highlights:'put highlight here', notes:'N/A'},
+			{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+			{craving:'spicy', symptoms:'none', mood:'calm', highlights:'put highlight here', notes:'N/A'},
+			{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+			{craving:'spicy', symptoms:'none', mood:'calm', highlights:'put highlight here', notes:'N/A'},
+			{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+			{craving:'spicy', symptoms:'none', mood:'calm', highlights:'put highlight here', notes:'N/A'},
+			{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+			{craving:'spicy', symptoms:'none', mood:'calm', highlights:'put highlight here', notes:'N/A'},
+			{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+			{craving:'spicy', symptoms:'none', mood:'calm', highlights:'put highlight here', notes:'N/A'},
+			{craving:'salty', symptoms:'fatigue', mood:'sleepy', highlights:'put highlight here', notes:'N/A'},
+			{craving:'spicy', symptoms:'none', mood:'calm', highlights:'put highlight here', notes:'N/A'},
 		]
 	},
 	{
@@ -110,10 +125,7 @@ function AppContainer() {
 	return(
 		<div id="app-container">
 			<Route path="/provider/patients"><Patients activePatient={activePatient} patients={patients} setActivePatient={setActivePatient}/></Route>
-			{/* <Route path="/app/dashboard"><Dashboard userData={userData} addUserData={addUserData}/></Route>
-			<Route path="/app/share"><Share contacts={contacts} addContact={addContact} editContact={editContact} deleteContact={deleteContact} /></Route>
-			<Route path="/app/journal"><Journal journals={journals} addJournal={addJournal} editJournal={editJournal}/></Route>
-			<Route path="/app/feedback"><Feedback/></Route> */}
+			<Route path="/provider/feedback"><Feedback/></Route>
 		</div>
 	);
 }

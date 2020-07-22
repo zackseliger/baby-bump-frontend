@@ -260,3 +260,17 @@ p.row span {
   border-radius: 10px;
   padding: 20px;
 }
+
+.signup-form {
+  width: 50%;
+  margin: 0 auto;
+  text-align: left;
+}
+.signup-form input {
+  width: 100%;
+}
+.signup-form br {
+  display: block;
+  margin-top: 5px;
+  content: " ";
+}

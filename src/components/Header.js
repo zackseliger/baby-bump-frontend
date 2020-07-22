@@ -9,7 +9,7 @@ function Header() {
 					<Link to="/" style={{marginLeft: 'auto'}}>Home</Link>
 					<Link to="/learnmore">Learn More</Link>
 					<Link to="/login2">Provider Login</Link>
-					<Link to="/login" style={{marginLeft: '25px'}}>Log In</Link>
+					<Link to="/login">Patient Login</Link>
 				</div>
 			</div>
 		</div>

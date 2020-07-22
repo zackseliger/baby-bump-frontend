@@ -26,7 +26,7 @@ function PatientView(props) {
 			</div>
 
 			{/*JOURNALS*/}
-			<h1 style={{marginTop:'50px'}}>Journals</h1>
+			<h1 style={{marginTop:'50px'}}>Journal Entries</h1>
 			<div>
 				{props.patient.journals.map((journal, index) => {
 					return (

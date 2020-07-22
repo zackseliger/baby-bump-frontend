@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 function SharePersonForm(props) {
-	let [shareData, setShareData] = useState(true);
+	let [shareMetrics, setShareMetrics] = useState(true);
+	let [shareJournals, setShareJournals] = useState(true);
 	let [readPolicy, setReadPolicy] = useState(false);
 
 	function submit() {
@@ -13,7 +14,8 @@ function SharePersonForm(props) {
 			lastName: inputs[1].value,
 			email: inputs[2].value,
 			relationship: relationshipSelect.options[relationshipSelect.selectedIndex].text,
-			shareData: shareData,
+			shareMetrics: shareMetrics,
+			shareJournals: shareJournals,
 			readPolicy: readPolicy
 		};
 
@@ -47,14 +49,19 @@ function SharePersonForm(props) {
 				</p>
 
 				<p>
-					Share all data
-					<input type="checkbox" className="oval" id="share-data-checkbox" checked={shareData} onChange={() => setShareData(!shareData)}/>
-					<label className="oval-toggler" htmlFor="share-data-checkbox"></label>
+					Share your metrics
+					<input type="checkbox" className="oval" id="share-metrics-checkbox" checked={shareMetrics} onChange={() => setShareMetrics(!shareMetrics)}/>
+					<label className="oval-toggler" htmlFor="share-metrics-checkbox"></label>
+				</p>
+				<p>
+					Share your journal entries
+					<input type="checkbox" className="oval" id="share-journals-checkbox" checked={shareJournals} onChange={() => setShareJournals(!shareJournals)}/>
+					<label className="oval-toggler" htmlFor="share-journals-checkbox"></label>
 				</p>
 				
 				<p>
-					<input type="checkbox" checked={readPolicy} onChange={() => setReadPolicy(!readPolicy)}/>
-					I have read and acknolwedge the privacy policy.
+					<input type="checkbox" style={{boxShadow:'none'}} checked={readPolicy} onChange={() => setReadPolicy(!readPolicy)}/>
+					I have read and acknowledge the privacy policy.
 				</p>
 
 				<div style={{display:'flex', justifyContent:'space-evenly'}}>

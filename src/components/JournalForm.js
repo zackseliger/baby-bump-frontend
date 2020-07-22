@@ -31,7 +31,7 @@ function JournalForm(props) {
 			<div className="popup same-rows" id="journal-popup">
 				<span style={{fontWeight:'bold', color:'#3D6053'}}>Add a journal entry</span>
 
-				<p style={{display: 'block'}}>week 1</p>
+				<p style={{display: 'block'}}>week {props.weekNum}</p>
 
 				<p>
 					cravings
