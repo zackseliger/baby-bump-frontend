@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import SharePersonForm from '../SharePersonForm';
+import EditContactForm from '../EditContactForm';
 
 function Share(props) {
 	let [showingAddForm, setShowingAddForm] = useState(false);
+	let [editContact, setEditContact] = useState(null);
 
 	function showAddForm() {
 		setShowingAddForm(true);
@@ -30,7 +32,7 @@ function Share(props) {
 						<span>{contact.relationship}</span><br/>
 
 						<div style={{marginTop:'10px'}}>
-							<button style={{marginRight: '20px'}} onClick={() => props.editContact(contact)}>edit</button>
+							<button style={{marginRight: '20px'}} onClick={() => setEditContact(index)}>edit</button>
 							<button onClick={() => props.deleteContact(contact)} className="inverted">delete</button>
 						</div>
 					</div>
@@ -38,6 +40,7 @@ function Share(props) {
 			})}
 
 			{(showingAddForm)?<SharePersonForm addContact={props.addContact} setVisible={setShowingAddForm}/>:[]}
+			{(editContact !== null)?<EditContactForm contact={props.contacts[editContact]} contactIndex={editContact} editContact={props.editContact} close={() => setEditContact(null)}/>:[]}
 		</div>
 	);
 }

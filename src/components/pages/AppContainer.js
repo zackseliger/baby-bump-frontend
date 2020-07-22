@@ -98,8 +98,27 @@ function AppContainer() {
 		setContacts(newContacts);
 	}
 
-	function editContact(contact) {
-		console.log("edit "+contact.firstName);
+	function editContact(index, newContact) {
+		let newContacts = [];
+		for (let i = 0; i < contacts.length; i++) {
+			if (i === index) {
+				newContacts[i] = newContact;
+				newContacts[i].readPolicy = true;
+				continue;
+			}
+
+			newContacts.push({
+				firstName: contacts[i].firstName,
+				lastName: contacts[i].lastName,
+				email: contacts[i].email,
+				relationship: contacts[i].relationship,
+				shareMetrics: contacts[i].shareMetrics,
+				shareJournals: contacts[i].shareJournals,
+				readPolicy: contacts[i].readPolicy
+			});
+		}
+
+		setContacts(newContacts);
 	}
 
 	function deleteContact(contact) {
