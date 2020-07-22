@@ -274,3 +274,9 @@ p.row span {
   margin-top: 5px;
   content: " ";
 }
+
+.profile-title {
+  color: #3D6053 !important;
+  font-weight: bold;
+  line-height: 0.5;
+}

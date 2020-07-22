@@ -4,6 +4,7 @@ import Dashboard from '../app_sections/Dashboard';
 import Share from '../app_sections/Share';
 import Journal from '../app_sections/Journal';
 import Feedback from '../app_sections/Feedback';
+import Profile from '../app_sections/Profile';
 
 const startingUserData = [
 	{
@@ -16,7 +17,7 @@ const startingUserData = [
 	},
 	{
 		name: 'weight',
-		data: [120, 118, 115]
+		data: [122, 118, 115]
 	},
 	{
 		name: 'anxiety',
@@ -170,6 +171,7 @@ function AppContainer() {
 			<Route path="/app/share"><Share contacts={contacts} addContact={addContact} editContact={editContact} deleteContact={deleteContact} /></Route>
 			<Route path="/app/journal"><Journal journals={journals} addJournal={addJournal} editJournal={editJournal}/></Route>
 			<Route path="/app/feedback"><Feedback/></Route>
+			<Route path="/app/profile"><Profile/></Route>
 		</div>
 	);
 }

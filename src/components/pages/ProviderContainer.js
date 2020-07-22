@@ -6,11 +6,14 @@ import Feedback from '../provider_sections/Feedback';
 const startingPatients = [
 	{
 		name: 'Naomi Robinson',
+		email: 'naomi.robinson@email.com',
+		dueDate: '02/10/2021',
 		dob: '03/14/1992',
+		race: 'African American',
 		userData: [
 			{name: 'systolic blood pressure', data: [122, 125, 120]},
 			{name: 'diastolic blood pressure', data: [80, 83, 81]},
-			{name: 'weight', data: [120, 118, 115]},
+			{name: 'weight', data: [122, 118, 115]},
 			{name: 'anxiety', data: [2, 3, 2]},
 			{name: 'kicks', data: [12, 14, 5]},
 			{name: 'fetal heart tones', data: [127, 144, 155]}
@@ -36,7 +39,10 @@ const startingPatients = [
 	},
 	{
 		name: 'Adriana Gutierrez',
+		email: 'adriana.gutierrez@email.com',
+		dueDate: '02/10/2021',
 		dob: '06/11/1999',
+		race: 'Hispanic or Latino',
 		userData: [
 			{name: 'systolic blood pressure', data: [124, 213, 123]},
 			{name: 'diastolic blood pressure', data: [48, 68, 89]},
@@ -52,7 +58,10 @@ const startingPatients = [
 	},
 	{
 		name: 'Vanessa Jones',
+		email: 'vanessa.jones@email.com',
+		dueDate: '02/10/2021',
 		dob: '1/26/1984',
+		race: 'White',
 		userData: [
 			{name: 'systolic blood pressure', data: [124, 123, 213, 123]},
 			{name: 'diastolic blood pressure', data: [48, 45, 68, 89]},
@@ -67,7 +76,10 @@ const startingPatients = [
 	},
 	{
 		name: 'Li Xiong',
+		email: 'li.xiong@email.com',
+		dueDate: '08/04/2021',
 		dob: '08/31/1997',
+		race: 'Asian',
 		userData: [
 			{name: 'systolic blood pressure', data: [213, 123]},
 			{name: 'diastolic blood pressure', data: [68, 89]},
@@ -83,7 +95,10 @@ const startingPatients = [
 	},
 	{
 		name: 'Amy Nelson',
+		email: 'amy.nelson@email.com',
+		dueDate: '09/14/2021',
 		dob: '11/02/1988',
+		race: 'White',
 		userData: [
 			{name: 'systolic blood pressure', data: [124, 213, 123]},
 			{name: 'diastolic blood pressure', data: [48, 68, 89]},
@@ -101,7 +116,10 @@ const startingPatients = [
 	},
 	{
 		name: 'Jessica Martinez',
+		email: 'jess.martinez@email.com',
+		dueDate: '02/10/2021',
 		dob: '12/23/1994',
+		race: 'Hispanic or Latino',
 		userData: [
 			{name: 'systolic blood pressure', data: [122, 125, 120]},
 			{name: 'diastolic blood pressure', data: [80, 83, 81]},
