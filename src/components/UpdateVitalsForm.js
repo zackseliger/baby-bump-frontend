@@ -6,12 +6,12 @@ function UpdateVitalsForm(props) {
 		let anxietySelect = document.getElementById('vitals-popup').getElementsByTagName('select')[0];
 
 		let data = {
-			'systolic blood pressure': parseInt(inputs[0].value),
-			'diastolic blood pressure': parseInt(inputs[1].value),
-			weight: parseInt(inputs[2].value),
+			'systolic blood pressure': parseInt(inputs[0].value) || Math.round(Math.random()*30+120),
+			'diastolic blood pressure': parseInt(inputs[1].value) || Math.round(Math.random()*10+80),
+			weight: parseInt(inputs[2].value) || Math.round(Math.random()*30+100),
 			anxiety: parseInt(anxietySelect.options[anxietySelect.selectedIndex].text[0]),
-			kicks: parseInt(inputs[3].value),
-			'fetal heart tones': parseInt(inputs[4].value)
+			kicks: parseInt(inputs[3].value) || Math.round(Math.random()*5+7),
+			'fetal heart tones': parseInt(inputs[4].value) || Math.round(Math.random()*50+120)
 		}
 
 		props.setVisible(false);

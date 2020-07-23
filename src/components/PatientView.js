@@ -53,7 +53,7 @@ function PatientView(props) {
 					<p>{props.patient.dueDate}</p>
 
 					<p className="profile-title">starting weight</p>
-					<p>{props.patient.userData[2][0]+" lbs."}</p>
+					<p>{props.patient.userData[2].data[0]+" lbs."}</p>
 
 					<p className="profile-title">birth date</p>
 					<p>{props.patient.dob}</p>

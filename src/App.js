@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 //pages
 import Homepage from './components/pages/Homepage';
+import LearnMore from './components/pages/LearnMore';
 import Login from './components/pages/Login';
 import ProviderLogin from './components/pages/ProviderLogin';
 import Signup from './components/pages/Signup';
@@ -28,6 +29,7 @@ function App() {
 
       <Switch>
         <Route path="/" exact><Homepage/></Route>
+        <Route path="/learnmore"><LearnMore/></Route>
         <Route path="/login"><Login/></Route>
         <Route path="/login2"><ProviderLogin/></Route>
         <Route path="/signup"><Signup/></Route>

@@ -280,3 +280,19 @@ p.row span {
   font-weight: bold;
   line-height: 0.5;
 }
+
+.home-section {
+  margin: 100px 0;
+  position: relative;
+  color: #FFF;
+  background: #D2A297;
+  border-radius: 200px 0px;
+  padding: 50px;
+  text-align: center;
+}
+.home-section img {
+  width: 80%;
+}
+.home-section p {
+  color: #FFF;
+}
